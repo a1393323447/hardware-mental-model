@@ -1,0 +1,42 @@
+[package]
+name = "hardware-mental-model"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+criterion = {version = "0.3", features = ["html_reports"]}
+
+[[bench]]
+name = "cache_basic"
+path = "benches/cache/basic.rs"
+harness = false
+
+[[bench]]
+name = "cache_prefetcher"
+path = "benches/cache/prefetcher.rs"
+harness = false
+
+[[bench]]
+name = "cache_associativity"
+path = "benches/cache/associativity.rs"
+harness = false
+
+[[bench]]
+name = "cache_cacheline"
+path = "benches/cache/cacheline.rs"
+harness = false
+
+[[bench]]
+name = "pipeline"
+path = "benches/pipeline.rs"
+harness = false
+
+[[bench]]
+name = "data_dependency"
+path = "benches/data_dependency.rs"
+harness = false
+
+[dependencies]
+rand = "0.8.5"
