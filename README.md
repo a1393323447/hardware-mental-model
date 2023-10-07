@@ -95,7 +95,7 @@ pub fn random_access(arr: &mut Vec<Vec<usize>>) {
 
 ![](imgs/cache/prefetcher.PNG)
 
-可以看到，`random_access` 比 `column_major` 的效率还要低了近 7 倍。原因是，在 `cache` 和 `cpu` 间还有 `prefetcher`
+可以看到，`random_access` 比 `column_major` 的效率还要低了 `2` 倍。原因是，在 `cache` 和 `cpu` 间还有 `prefetcher`
 
 ![](imgs/model1.png)
 
