@@ -2,9 +2,9 @@ pub fn row_major_traversal(arr: &mut Vec<Vec<usize>>) {
     let n = arr.len();
     for i in 0..n {
         assert!(arr[i].len() == n);
-        let ri: usize = rand::random();
-        std::intrinsics::black_box(ri);
         for j in 0..n {
+            let ri: usize = rand::random();
+            std::intrinsics::black_box(ri);
             arr[i][j] += j;
         }
     }
@@ -14,9 +14,9 @@ pub fn column_major_traversal(arr: &mut Vec<Vec<usize>>) {
     let n = arr.len();
     for i in 0..n {
         assert!(arr[i].len() == n);
-        let ri: usize = rand::random();
-        std::intrinsics::black_box(ri);
         for j in 0..n {
+            let ri: usize = rand::random();
+            std::intrinsics::black_box(ri);
             arr[j][i] += j;
         }
     }
